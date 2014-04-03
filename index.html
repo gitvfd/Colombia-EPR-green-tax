@@ -9,7 +9,7 @@
 <style>
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeueLT", Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
   width: 560px;
@@ -17,6 +17,7 @@ body {
 
 text {
   font: 12px sans-serif;
+  color: #717171;
 }
 
 .axis path {
@@ -25,7 +26,7 @@ text {
 
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #717171;
   shape-rendering: crispEdges;
 }
 
@@ -70,7 +71,7 @@ text {
 <div class="row">
 <center>
   <h1>Green taxes</h1>
-  <h2>The lost revenues</h2>
+  <h2>Colombia’s lost revenue</h2>
 </center>
 </div>
 <div class="row">
@@ -114,7 +115,7 @@ text {
 
       var color = d3.scale.ordinal()
                       .domain(["Energy products","Motor vehicles","Other"])
-                      .range(["#3DA594","#237FBD","#2CA3E0"]);
+                      .range(["rgb(49,133,156)","rgb(41,199,255)","rgb(217,224,33)"]);
 
       var svg = d3.select("#area1").append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -158,7 +159,7 @@ text {
             .style("fill", function(d) { return color(d.variable); })
             .style("opacity",function(d){
               if(d.country!="Colombia")
-                return 0.6;
+                return 0.7;
               else
                 return 1;
             })
