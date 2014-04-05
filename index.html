@@ -20,6 +20,12 @@ text {
   color: #717171;
 }
 
+#source {
+  font-size: 10px;
+  font-style:italic;
+  color: #717171;
+  font-family: "HelveticaNeueLT", Helvetica, Arial, sans-serif;
+}
 .axis path {
   display: none;
 }
@@ -122,6 +128,7 @@ text {
           .attr("height", height + margin.top + margin.bottom)
         .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      
 
       d3.csv("data/tax.csv", function(error, data) {
 
@@ -226,7 +233,7 @@ text {
         svg.append("text")
             .attr("x",width/3)
             .attr("y",30)
-            .text("In % of GDP")
+            .text("As % of GDP")
             .style("font-style","italic");
             /**.style("fill","grey")
             .style("font","20px sans-serif")
@@ -274,6 +281,9 @@ text {
     </script>
   </div>
 </div>
-
+<div class="row">
+  <div id="source" class="span7"><a href="http://dx.doi.org/10.1787/888932997892">Sources: OECD calculations; OECD/EEA (2013) OECD/EEA Database on Instruments Used for Environmental Policy and Natural Resources Management.</a>
+  </div>
+</div>
 
 </body>
